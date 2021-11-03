@@ -12,6 +12,7 @@ namespace Domain.Entities
         public string Apellido { get; set; }
         public string Cedula { get; set; }
         public Genero Genero { get; set; }
+        public int CantidadDonada { get; set; } 
         public string Ocupacion { get; set; }
         public DateTime FechaNacimiento { get; set; }
         public string Telefono { get; set; }

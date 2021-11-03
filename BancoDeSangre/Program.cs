@@ -1,4 +1,9 @@
-﻿using BancoDeSangre.Formularios;
+﻿using AppCore.Interfaces;
+using AppCore.Services;
+using Autofac;
+using BancoDeSangre.Formularios;
+using Domain.Interfaces;
+using Infraestructure.Donantes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +20,16 @@ namespace BancoDeSangre
         [STAThread]
         static void Main()
         {
+            //TODO: Falta agregar el proceso
+
+            //var builder = new ContainerBuilder();
+
+            //builder.RegisterType<DonanteModel>().As<IDonanteRepository>();
+            //builder.RegisterType<DonanteService>().As<IDonanteService>();
+
+            //var container = builder.Build();
+
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmMenuPrincipal());
