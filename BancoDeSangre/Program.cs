@@ -32,7 +32,7 @@ namespace BancoDeSangre
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmMenuPrincipal());
+            Application.Run(new FrmLogin());
         }
     }
 }
