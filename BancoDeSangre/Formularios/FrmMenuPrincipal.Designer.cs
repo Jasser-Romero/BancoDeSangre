@@ -29,48 +29,50 @@ namespace BancoDeSangre.Formularios
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnRegistrar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnConsultas = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btnAyuda = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // btnRegistrar
             // 
-            this.button1.Location = new System.Drawing.Point(108, 69);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(179, 108);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Registrar Donante";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Location = new System.Drawing.Point(108, 69);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(179, 108);
+            this.btnRegistrar.TabIndex = 0;
+            this.btnRegistrar.Text = "Registrar Donante";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(444, 69);
+            this.button2.Location = new System.Drawing.Point(108, 245);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(179, 108);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Verificar Donantes";
+            this.button2.Text = "Almacenamiento de donaciones";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnConsultas
             // 
-            this.button3.Location = new System.Drawing.Point(108, 260);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(179, 108);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Consultar Donante";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnConsultas.Location = new System.Drawing.Point(444, 69);
+            this.btnConsultas.Name = "btnConsultas";
+            this.btnConsultas.Size = new System.Drawing.Size(179, 108);
+            this.btnConsultas.TabIndex = 2;
+            this.btnConsultas.Text = "Consultar Donantes";
+            this.btnConsultas.UseVisualStyleBackColor = true;
+            this.btnConsultas.Click += new System.EventHandler(this.btnConsultas_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(444, 260);
+            this.button4.Location = new System.Drawing.Point(444, 245);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(179, 108);
             this.button4.TabIndex = 3;
-            this.button4.Text = "Donaciones";
+            this.button4.Text = "Donar";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // btnAyuda
@@ -100,9 +102,9 @@ namespace BancoDeSangre.Formularios
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnConsultas);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnRegistrar);
             this.Name = "FrmMenuPrincipal";
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.FrmMenuPrincipal_Load);
@@ -113,9 +115,9 @@ namespace BancoDeSangre.Formularios
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnConsultas;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnAyuda;
         private System.Windows.Forms.Label label1;

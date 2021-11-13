@@ -19,7 +19,7 @@ namespace Infraestructure.Donantes
 
         public void Create(Donante t)
         {
-          if(t == null)
+            if (t == null)
             {
                 throw new ArgumentNullException(nameof(t));
             }
@@ -54,6 +54,11 @@ namespace Infraestructure.Donantes
         public Donante[] FindAll()
         {
             return donantes.ToArray();
+        }
+
+        public List<Donante> GetAll()
+        {
+            return donantes;
         }
 
         public Donante GetDonanteById(int id)

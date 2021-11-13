@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AppCore.Services;
+using Infraestructure.Donantes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,16 @@ namespace BancoDeSangre.Formularios
 {
     public partial class FrmConsultar : Form
     {
+        public DonanteModel donanteService { get; set; }
         public FrmConsultar()
         {
             InitializeComponent();
+        }
+
+        private void FrmConsultar_Load(object sender, EventArgs e)
+        {
+            dtgListaDonantes.DataSource = null;
+            dtgListaDonantes.DataSource = donanteService.GetAll();
         }
     }
 }

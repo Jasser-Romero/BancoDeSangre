@@ -36,6 +36,11 @@ namespace AppCore.Services
             return donanteRepository.FindAll();
         }
 
+        public List<Donante> GetAll()
+        {
+            return donanteRepository.GetAll();
+        }
+
         public Donante GetDonanteById(int id)
         {
             return donanteRepository.GetDonanteById(id);

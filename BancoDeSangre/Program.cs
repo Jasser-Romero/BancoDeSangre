@@ -22,14 +22,14 @@ namespace BancoDeSangre
         {
             //TODO: Falta agregar el proceso
 
-            //var builder = new ContainerBuilder();
+            var builder = new ContainerBuilder();
 
-            //builder.RegisterType<DonanteModel>().As<IDonanteRepository>();
-            //builder.RegisterType<DonanteService>().As<IDonanteService>();
+            builder.RegisterType<DonanteModel>().As<IDonanteRepository>();
+            builder.RegisterType<DonanteService>().As<IDonanteService>();
 
-            //var container = builder.Build();
+            var container = builder.Build();
 
-
+            //FrmMenuPrincipal frmMenu = new FrmMenuPrincipal(container.Resolve)
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmLogin());
