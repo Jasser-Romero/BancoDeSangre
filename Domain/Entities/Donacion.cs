@@ -6,11 +6,14 @@ namespace Domain.Entities
 {
     public class Donacion : Donante
     {
-        public Donacion()
-        {
-        }
 
         public decimal CantidadDonada { get; set; }
+        public Donacion()
+        {
+        
+        }
+
+       
 
     }
 }

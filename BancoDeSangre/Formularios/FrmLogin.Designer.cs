@@ -30,20 +30,20 @@ namespace BancoDeSangre.Formularios
         private void InitializeComponent()
         {
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtContrasena = new System.Windows.Forms.TextBox();
-            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lblLogin = new System.Windows.Forms.Label();
             this.btnAcceder = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // shapeContainer1
@@ -57,6 +57,15 @@ namespace BancoDeSangre.Formularios
             this.shapeContainer1.Size = new System.Drawing.Size(780, 330);
             this.shapeContainer1.TabIndex = 0;
             this.shapeContainer1.TabStop = false;
+            // 
+            // lineShape2
+            // 
+            this.lineShape2.Enabled = false;
+            this.lineShape2.Name = "lineShape2";
+            this.lineShape2.X1 = 326;
+            this.lineShape2.X2 = 739;
+            this.lineShape2.Y1 = 166;
+            this.lineShape2.Y2 = 166;
             // 
             // lineShape1
             // 
@@ -76,6 +85,16 @@ namespace BancoDeSangre.Formularios
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 330);
             this.panel1.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BancoDeSangre.Properties.Resources.pngegg__1_3;
+            this.pictureBox1.Location = new System.Drawing.Point(32, 69);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(174, 157);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // txtUsuario
             // 
@@ -104,15 +123,6 @@ namespace BancoDeSangre.Formularios
             this.txtContrasena.Text = "CONTRASEÑA";
             this.txtContrasena.Enter += new System.EventHandler(this.txtContrasena_Enter);
             this.txtContrasena.Leave += new System.EventHandler(this.txtContrasena_Leave);
-            // 
-            // lineShape2
-            // 
-            this.lineShape2.Enabled = false;
-            this.lineShape2.Name = "lineShape2";
-            this.lineShape2.X1 = 326;
-            this.lineShape2.X2 = 739;
-            this.lineShape2.Y1 = 166;
-            this.lineShape2.Y2 = 166;
             // 
             // lblLogin
             // 
@@ -143,10 +153,11 @@ namespace BancoDeSangre.Formularios
             // 
             // btnMinimizar
             // 
+            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimizar.Image = global::BancoDeSangre.Properties.Resources.window_minimize_icon_144028;
-            this.btnMinimizar.Location = new System.Drawing.Point(670, -15);
+            this.btnMinimizar.Location = new System.Drawing.Point(685, -11);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(50, 57);
+            this.btnMinimizar.Size = new System.Drawing.Size(36, 41);
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMinimizar.TabIndex = 0;
             this.btnMinimizar.TabStop = false;
@@ -154,24 +165,15 @@ namespace BancoDeSangre.Formularios
             // 
             // btnSalir
             // 
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir.Image = global::BancoDeSangre.Properties.Resources.cancel_close_delete_exit_logout_remove_x_icon_123217;
             this.btnSalir.Location = new System.Drawing.Point(726, 9);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(42, 33);
+            this.btnSalir.Size = new System.Drawing.Size(42, 22);
             this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnSalir.TabIndex = 0;
             this.btnSalir.TabStop = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::BancoDeSangre.Properties.Resources.pngegg__1_3;
-            this.pictureBox1.Location = new System.Drawing.Point(32, 69);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(174, 157);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // FrmLogin
             // 
@@ -193,9 +195,9 @@ namespace BancoDeSangre.Formularios
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLogin";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

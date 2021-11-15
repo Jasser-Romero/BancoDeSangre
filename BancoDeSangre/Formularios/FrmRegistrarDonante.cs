@@ -57,25 +57,58 @@ namespace BancoDeSangre.Formularios
             //{
             //    MessageBox.Show($"Error: {ex}");
             //}
-            Donante donante = new Donante()
+
+            if (cmbEstadoCivil.SelectedIndex == -1)
             {
-                Id = donanteModel.GetLastId() + 1,
-                Nombre = txtNombre.Text,
-                Apellido = txtApellidos.Text,
-                Cedula = txtCedula.Text,
-                Correo = txtCorreo.Text,
-                FactorRH = (FactorRH)cmbFactorRH.SelectedIndex,
-                EstadoCivil = (EstadoCivil)cmbEstadoCivil.SelectedIndex,
-                FechaNacimiento = dtpFechaNacimiento.Value,
-                GrupoSanguineo = (GrupoSanguineo)cmbGrupoSanguineo.SelectedIndex,
-                Genero = (Genero)cmbGenero.SelectedIndex,
-                Telefono = txtTelefono.Text,
-                Ocupacion = txtOcupacion.Text,
-            };
+                MessageBox.Show("Error, todos los campos son necesarios","Mensaje de Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
+            }
+            if (cmbFactorRH.SelectedIndex==-1)
+            {
+                MessageBox.Show("Error, todos los campos son necesarios", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (cmbGenero.SelectedIndex==-1)
+            {
+                MessageBox.Show("Error, todos los campos son necesarios", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (cmbGrupoSanguineo.SelectedIndex == -1)
+            {
+                MessageBox.Show("Error, todos los campos son necesarios", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-            donanteModel.Create(donante);
+            if (string.IsNullOrEmpty(txtNombre.Text)||string.IsNullOrEmpty(txtApellidos.Text)||string.IsNullOrEmpty(txtCedula.Text)
+                || string.IsNullOrEmpty(txtCorreo.Text)||string.IsNullOrEmpty(txtOcupacion.Text)||string.IsNullOrEmpty(txtTelefono.Text))
+            {
+                MessageBox.Show("Error, se requieren de todos los campos","Mensaje de Error", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return;
+            }
 
-            Dispose();
+
+                Donante donante = new Donante()
+                {
+                    Id = donanteModel.GetLastId() + 1,
+                    Nombre = txtNombre.Text,
+                    Apellido = txtApellidos.Text,
+                    Cedula = txtCedula.Text,
+                    Correo = txtCorreo.Text,
+                    FactorRH = (FactorRH)cmbFactorRH.SelectedIndex,
+                    EstadoCivil = (EstadoCivil)cmbEstadoCivil.SelectedIndex,
+                    FechaNacimiento = dtpFechaNacimiento.Value,
+                    GrupoSanguineo = (GrupoSanguineo)cmbGrupoSanguineo.SelectedIndex,
+                    Genero = (Genero)cmbGenero.SelectedIndex,
+                    Telefono = txtTelefono.Text,
+                    Ocupacion = txtOcupacion.Text,
+
+
+                };
+                donanteModel.Create(donante);
+                Dispose();
+            }
+
         }
     }
-}
+

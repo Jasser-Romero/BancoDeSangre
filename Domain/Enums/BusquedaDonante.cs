@@ -7,6 +7,7 @@ namespace Domain.Enums
     public enum BusquedaDonante
     {
         ID,
-        Nombre
+        Nombre,
+        GrupoSanguineo
     }
 }
