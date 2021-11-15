@@ -54,6 +54,10 @@ namespace BancoDeSangre.Formularios
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.cmbFactorRH = new System.Windows.Forms.ComboBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.nudCantidadDonada = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidadDonada)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -233,7 +237,7 @@ namespace BancoDeSangre.Formularios
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(506, 304);
+            this.btnGuardar.Location = new System.Drawing.Point(515, 355);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(105, 35);
             this.btnGuardar.TabIndex = 24;
@@ -249,6 +253,7 @@ namespace BancoDeSangre.Formularios
             this.btnLimpiar.TabIndex = 25;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // label11
             // 
@@ -268,11 +273,41 @@ namespace BancoDeSangre.Formularios
             this.cmbFactorRH.Size = new System.Drawing.Size(143, 21);
             this.cmbFactorRH.TabIndex = 27;
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(643, 355);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(105, 35);
+            this.btnCancelar.TabIndex = 28;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(332, 304);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(91, 13);
+            this.label12.TabIndex = 29;
+            this.label12.Text = "Cantidad donada:";
+            // 
+            // nudCantidadDonada
+            // 
+            this.nudCantidadDonada.DecimalPlaces = 2;
+            this.nudCantidadDonada.Location = new System.Drawing.Point(429, 302);
+            this.nudCantidadDonada.Name = "nudCantidadDonada";
+            this.nudCantidadDonada.Size = new System.Drawing.Size(139, 20);
+            this.nudCantidadDonada.TabIndex = 30;
+            // 
             // FrmRegistrarDonante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.nudCantidadDonada);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.cmbFactorRH);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btnLimpiar);
@@ -301,6 +336,7 @@ namespace BancoDeSangre.Formularios
             this.Name = "FrmRegistrarDonante";
             this.Text = "FrmRegistrarDonante";
             this.Load += new System.EventHandler(this.FrmRegistrarDonante_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidadDonada)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -333,5 +369,8 @@ namespace BancoDeSangre.Formularios
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cmbFactorRH;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.NumericUpDown nudCantidadDonada;
     }
 }

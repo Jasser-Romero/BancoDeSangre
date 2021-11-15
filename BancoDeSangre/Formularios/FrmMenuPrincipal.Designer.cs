@@ -53,7 +53,7 @@ namespace BancoDeSangre.Formularios
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(179, 108);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Almacenamiento de donaciones";
+            this.button2.Text = "Almacenamiento de sangre";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // btnConsultas
@@ -72,7 +72,7 @@ namespace BancoDeSangre.Formularios
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(179, 108);
             this.button4.TabIndex = 3;
-            this.button4.Text = "Donar";
+            this.button4.Text = "Donaciones";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // btnAyuda

@@ -87,28 +87,46 @@ namespace BancoDeSangre.Formularios
                 return;
             }
 
+            Donante donante = new Donante()
+            {
+                Id = donanteModel.GetLastId() + 1,
+                Nombre = txtNombre.Text,
+                Apellido = txtApellidos.Text,
+                Cedula = txtCedula.Text,
+                Correo = txtCorreo.Text,
+                FactorRH = (FactorRH)cmbFactorRH.SelectedIndex,
+                EstadoCivil = (EstadoCivil)cmbEstadoCivil.SelectedIndex,
+                FechaNacimiento = dtpFechaNacimiento.Value,
+                GrupoSanguineo = (GrupoSanguineo)cmbGrupoSanguineo.SelectedIndex,
+                Genero = (Genero)cmbGenero.SelectedIndex,
+                Telefono = txtTelefono.Text,
+                Ocupacion = txtOcupacion.Text,
+                CantidadDonada = nudCantidadDonada.Value
 
-                Donante donante = new Donante()
-                {
-                    Id = donanteModel.GetLastId() + 1,
-                    Nombre = txtNombre.Text,
-                    Apellido = txtApellidos.Text,
-                    Cedula = txtCedula.Text,
-                    Correo = txtCorreo.Text,
-                    FactorRH = (FactorRH)cmbFactorRH.SelectedIndex,
-                    EstadoCivil = (EstadoCivil)cmbEstadoCivil.SelectedIndex,
-                    FechaNacimiento = dtpFechaNacimiento.Value,
-                    GrupoSanguineo = (GrupoSanguineo)cmbGrupoSanguineo.SelectedIndex,
-                    Genero = (Genero)cmbGenero.SelectedIndex,
-                    Telefono = txtTelefono.Text,
-                    Ocupacion = txtOcupacion.Text,
+            };
+            donanteModel.Create(donante);
+            Dispose();
+        }
 
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
 
-                };
-                donanteModel.Create(donante);
-                Dispose();
-            }
-
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtNombre.Clear();
+            txtApellidos.Clear();
+            txtCedula.Clear();
+            txtCorreo.Clear();
+            txtOcupacion.Clear();
+            txtTelefono.Clear();
+            cmbEstadoCivil.SelectedIndex = -1;
+            cmbFactorRH.SelectedIndex = -1;
+            cmbGenero.SelectedIndex = -1;
+            cmbGrupoSanguineo.SelectedIndex = -1;
+            nudCantidadDonada.Value = 0.00M;
         }
     }
+}
 

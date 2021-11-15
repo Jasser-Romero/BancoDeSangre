@@ -19,6 +19,7 @@ namespace Domain.Entities
         public GrupoSanguineo GrupoSanguineo { get; set; }
         public EstadoCivil EstadoCivil { get; set; }
         public string Correo { get; set; }
+        public decimal CantidadDonada { get; set; }
 
     }
 }
