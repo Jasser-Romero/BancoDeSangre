@@ -21,5 +21,15 @@ namespace Domain.Entities
         public string Correo { get; set; }
         public decimal CantidadDonada { get; set; }
 
+        protected Donante(string nombre, string apellidos, GrupoSanguineo grupoSanguineo, FactorRH factorRH)
+        {
+            Nombre = nombre;
+            Apellido = apellidos;
+            GrupoSanguineo = grupoSanguineo;
+            FactorRH = factorRH;
+        }
+        public Donante()
+        {
+        }
     }
 }

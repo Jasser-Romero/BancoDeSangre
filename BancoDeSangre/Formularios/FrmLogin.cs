@@ -88,6 +88,25 @@ namespace BancoDeSangre.Formularios
            
         }
 
+        private void txtContrasena_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                if (txtUsuario.Text.Equals(User) && txtContrasena.Text.Equals(Password))
+                {
+                    this.Hide();
+                    FrmMenuPrincipal principal = new FrmMenuPrincipal();
+                    principal.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+
+                    MessageBox.Show("Usted tiene algun dato erroneo, vuelva ingresar bien los datos", "Error de Verificacion", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+            }
         }
+    }
     }
 

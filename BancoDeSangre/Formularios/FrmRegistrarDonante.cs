@@ -17,7 +17,7 @@ namespace BancoDeSangre.Formularios
 {
     public partial class FrmRegistrarDonante : Form
     {
-        public DonanteModel donanteModel { get; set; }
+        public DonanteRepository donanteModel { get; set; }
         public FrmRegistrarDonante()
         {
             InitializeComponent();
@@ -100,9 +100,7 @@ namespace BancoDeSangre.Formularios
                 GrupoSanguineo = (GrupoSanguineo)cmbGrupoSanguineo.SelectedIndex,
                 Genero = (Genero)cmbGenero.SelectedIndex,
                 Telefono = txtTelefono.Text,
-                Ocupacion = txtOcupacion.Text,
-                CantidadDonada = nudCantidadDonada.Value
-
+                Ocupacion = txtOcupacion.Text
             };
             donanteModel.Create(donante);
             Dispose();
@@ -125,7 +123,6 @@ namespace BancoDeSangre.Formularios
             cmbFactorRH.SelectedIndex = -1;
             cmbGenero.SelectedIndex = -1;
             cmbGrupoSanguineo.SelectedIndex = -1;
-            nudCantidadDonada.Value = 0.00M;
         }
     }
 }

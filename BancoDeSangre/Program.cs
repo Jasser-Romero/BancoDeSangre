@@ -24,8 +24,11 @@ namespace BancoDeSangre
 
             var builder = new ContainerBuilder();
 
-            builder.RegisterType<DonanteModel>().As<IDonanteRepository>();
+            builder.RegisterType<DonanteRepository>().As<IDonanteRepository>();
             builder.RegisterType<DonanteService>().As<IDonanteService>();
+
+            builder.RegisterType<DonacionRepository>().As<IDonacionRepository>();
+            builder.RegisterType<DonacionService>().As<IDonacionService>();
 
             var container = builder.Build();
 

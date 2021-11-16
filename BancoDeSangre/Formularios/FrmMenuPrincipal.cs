@@ -14,10 +14,10 @@ namespace BancoDeSangre.Formularios
 {
     public partial class FrmMenuPrincipal : Form
     {
-        public DonanteModel donanteService;
+        public DonanteRepository donanteService;
         public FrmMenuPrincipal()
         {
-            donanteService = new DonanteModel();
+            donanteService = new DonanteRepository();
             InitializeComponent();
         }
 
@@ -39,6 +39,13 @@ namespace BancoDeSangre.Formularios
             frmConsultar.donanteService = donanteService;
             frmConsultar.ShowDialog();
 
+        }
+
+        private void btnDonar_Click(object sender, EventArgs e)
+        {
+            FrmDonaciones frmDonaciones = new FrmDonaciones();
+            frmDonaciones.donanteRepository = donanteService;
+            frmDonaciones.ShowDialog();
         }
     }
 }

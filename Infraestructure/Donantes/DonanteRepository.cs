@@ -5,17 +5,16 @@ using System.Collections.Generic;
 
 namespace Infraestructure.Donantes
 {
-    public class DonanteModel:IDonanteRepository
+    public class DonanteRepository:IDonanteRepository
     {
         private List<Donante> donantes;
         private List<Donante> donantesborrados;
 
-        public DonanteModel()
+        public DonanteRepository()
         {
             donantes = new List<Donante>();
             donantesborrados = new List<Donante>();
         }
-
 
         public void Create(Donante t)
         {

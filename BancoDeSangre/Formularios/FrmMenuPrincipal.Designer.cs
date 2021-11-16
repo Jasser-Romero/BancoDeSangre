@@ -32,7 +32,7 @@ namespace BancoDeSangre.Formularios
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnConsultas = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnDonar = new System.Windows.Forms.Button();
             this.btnAyuda = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -66,14 +66,15 @@ namespace BancoDeSangre.Formularios
             this.btnConsultas.UseVisualStyleBackColor = true;
             this.btnConsultas.Click += new System.EventHandler(this.btnConsultas_Click);
             // 
-            // button4
+            // btnDonar
             // 
-            this.button4.Location = new System.Drawing.Point(444, 245);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(179, 108);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Donaciones";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnDonar.Location = new System.Drawing.Point(444, 245);
+            this.btnDonar.Name = "btnDonar";
+            this.btnDonar.Size = new System.Drawing.Size(179, 108);
+            this.btnDonar.TabIndex = 3;
+            this.btnDonar.Text = "Donaciones";
+            this.btnDonar.UseVisualStyleBackColor = true;
+            this.btnDonar.Click += new System.EventHandler(this.btnDonar_Click);
             // 
             // btnAyuda
             // 
@@ -101,7 +102,7 @@ namespace BancoDeSangre.Formularios
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAyuda);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnDonar);
             this.Controls.Add(this.btnConsultas);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnRegistrar);
@@ -118,7 +119,7 @@ namespace BancoDeSangre.Formularios
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnConsultas;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnDonar;
         private System.Windows.Forms.Button btnAyuda;
         private System.Windows.Forms.Label label1;
     }

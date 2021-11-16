@@ -16,7 +16,7 @@ namespace BancoDeSangre.Formularios
 {
     public partial class FrmConsultar : Form
     {
-        public DonanteModel donanteService { get; set; }
+        public DonanteRepository donanteService { get; set; }
         public FrmConsultar()
         {
             InitializeComponent();
