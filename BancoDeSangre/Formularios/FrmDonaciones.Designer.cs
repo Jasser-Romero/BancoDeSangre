@@ -29,6 +29,7 @@ namespace BancoDeSangre.Formularios
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDonaciones));
             this.nudCantidadDonada = new System.Windows.Forms.NumericUpDown();
             this.label12 = new System.Windows.Forms.Label();
             this.txtApellidos = new System.Windows.Forms.TextBox();
@@ -215,6 +216,7 @@ namespace BancoDeSangre.Formularios
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nudCantidadDonada);
             this.Controls.Add(this.label12);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmDonaciones";
             this.Text = "FrmDonaciones";
             this.Load += new System.EventHandler(this.FrmDonaciones_Load);

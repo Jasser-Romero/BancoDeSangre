@@ -12,6 +12,10 @@ namespace BancoDeSangre.Formularios
 {
     public partial class FrmLogin : Form
     {
+
+        public int xClick = 0, yClick = 0; 
+
+
         private string User = "Admin";
         private string Password = "Anaconda";
         public FrmLogin()
@@ -106,6 +110,34 @@ namespace BancoDeSangre.Formularios
                         MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void Panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                xClick = e.X; yClick = e.Y;
+
+            }
+            else
+            {
+                this.Left = this.Left + (e.X - xClick); this.Top = this.Top + (e.Y - yClick);
+            }
+
+        }
+
+        private void FrmLogin_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button!=MouseButtons.Left)
+            {
+                xClick = e.X; yClick = e.Y;
+
+            }
+            else
+            {
+                this.Left = this.Left + (e.X - xClick); this.Top = this.Top + (e.Y - yClick);
+            }
+
         }
     }
     }

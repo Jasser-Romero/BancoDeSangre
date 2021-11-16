@@ -124,6 +124,11 @@ namespace BancoDeSangre.Formularios
             cmbGenero.SelectedIndex = -1;
             cmbGrupoSanguineo.SelectedIndex = -1;
         }
+
+        private void Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
 

@@ -29,6 +29,7 @@ namespace BancoDeSangre.Formularios
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsultar));
             this.dtgListaDonantes = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -170,6 +171,7 @@ namespace BancoDeSangre.Formularios
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dtgListaDonantes);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmConsultar";
             this.Text = "Consultas";
             this.Load += new System.EventHandler(this.FrmConsultar_Load);

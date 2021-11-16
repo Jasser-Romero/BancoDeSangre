@@ -29,6 +29,7 @@ namespace BancoDeSangre.Formularios
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenuPrincipal));
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnConsultas = new System.Windows.Forms.Button();
@@ -39,7 +40,7 @@ namespace BancoDeSangre.Formularios
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(108, 69);
+            this.btnRegistrar.Location = new System.Drawing.Point(110, 96);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(179, 108);
             this.btnRegistrar.TabIndex = 0;
@@ -49,7 +50,7 @@ namespace BancoDeSangre.Formularios
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(108, 245);
+            this.button2.Location = new System.Drawing.Point(110, 270);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(179, 108);
             this.button2.TabIndex = 1;
@@ -58,7 +59,7 @@ namespace BancoDeSangre.Formularios
             // 
             // btnConsultas
             // 
-            this.btnConsultas.Location = new System.Drawing.Point(444, 69);
+            this.btnConsultas.Location = new System.Drawing.Point(542, 96);
             this.btnConsultas.Name = "btnConsultas";
             this.btnConsultas.Size = new System.Drawing.Size(179, 108);
             this.btnConsultas.TabIndex = 2;
@@ -68,7 +69,7 @@ namespace BancoDeSangre.Formularios
             // 
             // btnDonar
             // 
-            this.btnDonar.Location = new System.Drawing.Point(444, 245);
+            this.btnDonar.Location = new System.Drawing.Point(542, 270);
             this.btnDonar.Name = "btnDonar";
             this.btnDonar.Size = new System.Drawing.Size(179, 108);
             this.btnDonar.TabIndex = 3;
@@ -99,13 +100,14 @@ namespace BancoDeSangre.Formularios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(852, 503);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.btnDonar);
             this.Controls.Add(this.btnConsultas);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnRegistrar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmMenuPrincipal";
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.FrmMenuPrincipal_Load);

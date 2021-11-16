@@ -29,6 +29,7 @@ namespace BancoDeSangre.Formularios
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistrarDonante));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -60,7 +61,7 @@ namespace BancoDeSangre.Formularios
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(59, 69);
+            this.label1.Location = new System.Drawing.Point(59, 122);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 0;
@@ -69,7 +70,7 @@ namespace BancoDeSangre.Formularios
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(59, 112);
+            this.label2.Location = new System.Drawing.Point(59, 165);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 1;
@@ -78,7 +79,7 @@ namespace BancoDeSangre.Formularios
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(59, 165);
+            this.label3.Location = new System.Drawing.Point(57, 209);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 13);
             this.label3.TabIndex = 2;
@@ -87,7 +88,7 @@ namespace BancoDeSangre.Formularios
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(59, 212);
+            this.label4.Location = new System.Drawing.Point(49, 253);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 13);
             this.label4.TabIndex = 3;
@@ -96,7 +97,7 @@ namespace BancoDeSangre.Formularios
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(59, 263);
+            this.label5.Location = new System.Drawing.Point(59, 304);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(41, 13);
             this.label5.TabIndex = 4;
@@ -105,7 +106,7 @@ namespace BancoDeSangre.Formularios
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(59, 321);
+            this.label6.Location = new System.Drawing.Point(66, 372);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(45, 13);
             this.label6.TabIndex = 5;
@@ -150,7 +151,7 @@ namespace BancoDeSangre.Formularios
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(59, 18);
+            this.label14.Location = new System.Drawing.Point(49, 70);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(52, 13);
             this.label14.TabIndex = 13;
@@ -158,35 +159,35 @@ namespace BancoDeSangre.Formularios
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(131, 66);
+            this.txtNombre.Location = new System.Drawing.Point(131, 119);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(148, 20);
             this.txtNombre.TabIndex = 14;
             // 
             // txtApellidos
             // 
-            this.txtApellidos.Location = new System.Drawing.Point(131, 109);
+            this.txtApellidos.Location = new System.Drawing.Point(131, 162);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(148, 20);
             this.txtApellidos.TabIndex = 15;
             // 
             // txtCedula
             // 
-            this.txtCedula.Location = new System.Drawing.Point(131, 162);
+            this.txtCedula.Location = new System.Drawing.Point(120, 205);
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(148, 20);
             this.txtCedula.TabIndex = 16;
             // 
             // txtOcupacion
             // 
-            this.txtOcupacion.Location = new System.Drawing.Point(131, 212);
+            this.txtOcupacion.Location = new System.Drawing.Point(120, 253);
             this.txtOcupacion.Name = "txtOcupacion";
             this.txtOcupacion.Size = new System.Drawing.Size(148, 20);
             this.txtOcupacion.TabIndex = 17;
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(131, 260);
+            this.txtCorreo.Location = new System.Drawing.Point(120, 301);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(148, 20);
             this.txtCorreo.TabIndex = 18;
@@ -211,7 +212,7 @@ namespace BancoDeSangre.Formularios
             // 
             this.cmbGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGenero.FormattingEnabled = true;
-            this.cmbGenero.Location = new System.Drawing.Point(131, 318);
+            this.cmbGenero.Location = new System.Drawing.Point(131, 369);
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(148, 21);
             this.cmbGenero.TabIndex = 21;
@@ -284,7 +285,7 @@ namespace BancoDeSangre.Formularios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(876, 524);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.cmbFactorRH);
             this.Controls.Add(this.label11);
@@ -311,6 +312,7 @@ namespace BancoDeSangre.Formularios
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmRegistrarDonante";
             this.Text = "FrmRegistrarDonante";
             this.Load += new System.EventHandler(this.FrmRegistrarDonante_Load);
