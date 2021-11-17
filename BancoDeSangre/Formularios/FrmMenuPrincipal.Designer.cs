@@ -107,7 +107,7 @@ namespace BancoDeSangre.Formularios
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.panel5.Location = new System.Drawing.Point(3, 437);
+            this.panel5.Location = new System.Drawing.Point(3, 468);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(5, 32);
             this.panel5.TabIndex = 10;
@@ -146,11 +146,13 @@ namespace BancoDeSangre.Formularios
             // 
             // pnlContenedor
             // 
+            this.pnlContenedor.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(243, 38);
             this.pnlContenedor.Name = "pnlContenedor";
             this.pnlContenedor.Size = new System.Drawing.Size(1057, 612);
             this.pnlContenedor.TabIndex = 8;
+            this.pnlContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContenedor_Paint);
             // 
             // btnAyuda
             // 
@@ -159,13 +161,14 @@ namespace BancoDeSangre.Formularios
             this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAyuda.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAyuda.ForeColor = System.Drawing.Color.White;
-            this.btnAyuda.Image = ((System.Drawing.Image)(resources.GetObject("btnAyuda.Image")));
-            this.btnAyuda.Location = new System.Drawing.Point(12, 437);
+            this.btnAyuda.Image = global::BancoDeSangre.Properties.Resources.icons8_manual_de_usuario_30__1_;
+            this.btnAyuda.Location = new System.Drawing.Point(9, 468);
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Size = new System.Drawing.Size(228, 32);
             this.btnAyuda.TabIndex = 4;
             this.btnAyuda.Text = "Ayuda";
             this.btnAyuda.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAyuda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAyuda.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
@@ -193,6 +196,7 @@ namespace BancoDeSangre.Formularios
             this.btnDonar.TabIndex = 3;
             this.btnDonar.Text = "          Donaciones";
             this.btnDonar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDonar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDonar.UseVisualStyleBackColor = true;
             this.btnDonar.Click += new System.EventHandler(this.btnDonar_Click);
             // 

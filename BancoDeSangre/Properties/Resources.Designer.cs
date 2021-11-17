@@ -83,6 +83,16 @@ namespace BancoDeSangre.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_actualizar_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-actualizar-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_añadir_usuario_masculino_80 {
             get {
                 object obj = ResourceManager.GetObject("icons8-añadir-usuario-masculino-80", resourceCulture);
@@ -123,6 +133,16 @@ namespace BancoDeSangre.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_cancelar_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-cancelar-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_carpeta_de_búsqueda_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-carpeta-de-búsqueda-30", resourceCulture);
@@ -153,6 +173,16 @@ namespace BancoDeSangre.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_dustpan_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-dustpan-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_gota_de_sangre_20 {
             get {
                 object obj = ResourceManager.GetObject("icons8-gota-de-sangre-20", resourceCulture);
@@ -163,9 +193,49 @@ namespace BancoDeSangre.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_gota_de_sangre_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-gota-de-sangre-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_gota_de_sangre_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-gota-de-sangre-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_guardar_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-guardar-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_health_report_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-health-report-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_manual_de_usuario_30__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-manual-de-usuario-30 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
