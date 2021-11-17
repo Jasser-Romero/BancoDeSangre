@@ -56,6 +56,7 @@ namespace BancoDeSangre.Formularios
             this.label1 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -180,15 +181,6 @@ namespace BancoDeSangre.Formularios
             this.txtNombre.Size = new System.Drawing.Size(148, 20);
             this.txtNombre.TabIndex = 40;
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(51, 50);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(56, 13);
-            this.label14.TabIndex = 39;
-            this.label14.Text = "Actualizar:";
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -296,11 +288,21 @@ namespace BancoDeSangre.Formularios
             this.txtId.Size = new System.Drawing.Size(66, 20);
             this.txtId.TabIndex = 56;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(62, 43);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(56, 13);
+            this.label13.TabIndex = 57;
+            this.label13.Text = "Actualizar:";
+            // 
             // FrmActualizar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.btnCancelar);
@@ -328,7 +330,6 @@ namespace BancoDeSangre.Formularios
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmActualizar";
             this.Text = "FrmActualizar";
             this.Load += new System.EventHandler(this.FrmActualizar_Load);
@@ -367,5 +368,6 @@ namespace BancoDeSangre.Formularios
         public System.Windows.Forms.ComboBox cmbGrupoSanguineo;
         public System.Windows.Forms.ComboBox cmbEstadoCivil;
         public System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.Label label13;
     }
 }

@@ -128,5 +128,10 @@ namespace BancoDeSangre.Formularios
             this.pnlContenedor.Tag = fh;
             fh.Show();
         }
+
+        private void pnlContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
