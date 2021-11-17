@@ -98,5 +98,15 @@ namespace BancoDeSangre.Formularios
         {
             Dispose();
         }
+
+        private void txtFactorRH_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtGrupoSanguineo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

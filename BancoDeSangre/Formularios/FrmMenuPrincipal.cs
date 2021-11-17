@@ -107,6 +107,11 @@ namespace BancoDeSangre.Formularios
             }
         }
 
+        private void pnlContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void AbrirFormHija(object formHija)
         {
             if (this.pnlContenedor.Controls.Count > 0)

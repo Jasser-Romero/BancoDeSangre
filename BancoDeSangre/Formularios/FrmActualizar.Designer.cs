@@ -44,7 +44,6 @@ namespace BancoDeSangre.Formularios
             this.txtCedula = new System.Windows.Forms.TextBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -55,6 +54,7 @@ namespace BancoDeSangre.Formularios
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -105,7 +105,7 @@ namespace BancoDeSangre.Formularios
             // 
             // dtpFechaNacimiento
             // 
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(459, 62);
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(587, 69);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(163, 20);
             this.dtpFechaNacimiento.TabIndex = 49;
@@ -132,14 +132,14 @@ namespace BancoDeSangre.Formularios
             // 
             this.cmbEstadoCivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstadoCivil.FormattingEnabled = true;
-            this.cmbEstadoCivil.Location = new System.Drawing.Point(420, 108);
+            this.cmbEstadoCivil.Location = new System.Drawing.Point(587, 118);
             this.cmbEstadoCivil.Name = "cmbEstadoCivil";
-            this.cmbEstadoCivil.Size = new System.Drawing.Size(148, 21);
+            this.cmbEstadoCivil.Size = new System.Drawing.Size(163, 21);
             this.cmbEstadoCivil.TabIndex = 46;
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(420, 161);
+            this.txtTelefono.Location = new System.Drawing.Point(587, 164);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(148, 20);
             this.txtTelefono.TabIndex = 45;
@@ -179,15 +179,6 @@ namespace BancoDeSangre.Formularios
             this.txtNombre.Size = new System.Drawing.Size(148, 20);
             this.txtNombre.TabIndex = 40;
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(51, 69);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(56, 13);
-            this.label14.TabIndex = 39;
-            this.label14.Text = "Actualizar:";
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -200,7 +191,7 @@ namespace BancoDeSangre.Formularios
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(334, 164);
+            this.label9.Location = new System.Drawing.Point(451, 168);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(52, 13);
             this.label9.TabIndex = 37;
@@ -209,7 +200,7 @@ namespace BancoDeSangre.Formularios
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(334, 111);
+            this.label8.Location = new System.Drawing.Point(451, 120);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(64, 13);
             this.label8.TabIndex = 36;
@@ -218,7 +209,7 @@ namespace BancoDeSangre.Formularios
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(334, 68);
+            this.label7.Location = new System.Drawing.Point(422, 76);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(109, 13);
             this.label7.TabIndex = 35;
@@ -278,11 +269,24 @@ namespace BancoDeSangre.Formularios
             this.label1.TabIndex = 29;
             this.label1.Text = "Nombre:";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Red;
+            this.label12.Location = new System.Drawing.Point(416, 27);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(167, 23);
+            this.label12.TabIndex = 55;
+            this.label12.Text = "ACTUALIZAR DONANTE";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // FrmActualizar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(927, 513);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.cmbFactorRH);
             this.Controls.Add(this.label11);
@@ -298,7 +302,6 @@ namespace BancoDeSangre.Formularios
             this.Controls.Add(this.txtCedula);
             this.Controls.Add(this.txtApellidos);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.label14);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -309,6 +312,7 @@ namespace BancoDeSangre.Formularios
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmActualizar";
             this.Text = "FrmActualizar";
             this.Load += new System.EventHandler(this.FrmActualizar_Load);
@@ -334,7 +338,6 @@ namespace BancoDeSangre.Formularios
         private System.Windows.Forms.TextBox txtCedula;
         private System.Windows.Forms.TextBox txtApellidos;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -345,5 +348,6 @@ namespace BancoDeSangre.Formularios
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label12;
     }
 }
