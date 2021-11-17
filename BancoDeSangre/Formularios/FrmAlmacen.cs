@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppCore.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,13 @@ namespace BancoDeSangre.Formularios
 {
     public partial class FrmAlmacen : Form
     {
+        public IDonanteService DonanteService { get; set; }
+        public IDonacionService DonacionService { get; set; }
         public FrmAlmacen()
         {
             InitializeComponent();
         }
+
+
     }
 }

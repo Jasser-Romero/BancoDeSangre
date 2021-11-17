@@ -113,14 +113,14 @@ namespace Infraestructure.Donantes
                 throw new ArgumentException($"El donante con id {t.Id} no existe");
             }
             donantes.Remove(donantes[index]);
-            donantes.Add(t);
+            donantes.Insert(index, t);
             return index;
         }
 
         public void Actualizar(Donante t)
         {
             int index = donantes.IndexOf(t);
-            if(index < 0)
+            if (index < 0)
             {
                 throw new Exception("El donante con dicha ID no existe");
             }

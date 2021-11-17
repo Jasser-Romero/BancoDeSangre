@@ -107,6 +107,14 @@ namespace BancoDeSangre.Formularios
             }
         }
 
+        private void btnAlmacen_Click(object sender, EventArgs e)
+        {
+            FrmAlmacen frmAlmacen = new FrmAlmacen();
+            frmAlmacen.DonacionService = donacionService;
+            frmAlmacen.DonanteService = donanteService;
+            AbrirFormHija(frmAlmacen);
+        }
+
         private void AbrirFormHija(object formHija)
         {
             if (this.pnlContenedor.Controls.Count > 0)

@@ -55,6 +55,8 @@ namespace BancoDeSangre.Formularios
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -182,7 +184,7 @@ namespace BancoDeSangre.Formularios
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(51, 69);
+            this.label14.Location = new System.Drawing.Point(51, 50);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(56, 13);
             this.label14.TabIndex = 39;
@@ -278,11 +280,30 @@ namespace BancoDeSangre.Formularios
             this.label1.TabIndex = 29;
             this.label1.Text = "Nombre:";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(61, 86);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(19, 13);
+            this.label12.TabIndex = 55;
+            this.label12.Text = "Id:";
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(133, 83);
+            this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(66, 20);
+            this.txtId.TabIndex = 56;
+            // 
             // FrmActualizar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.cmbFactorRH);
             this.Controls.Add(this.label11);
@@ -320,20 +341,9 @@ namespace BancoDeSangre.Formularios
         #endregion
 
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.ComboBox cmbFactorRH;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
-        private System.Windows.Forms.ComboBox cmbGrupoSanguineo;
-        private System.Windows.Forms.ComboBox cmbGenero;
-        private System.Windows.Forms.ComboBox cmbEstadoCivil;
-        private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.TextBox txtCorreo;
-        private System.Windows.Forms.TextBox txtOcupacion;
-        private System.Windows.Forms.TextBox txtCedula;
-        private System.Windows.Forms.TextBox txtApellidos;
-        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -345,5 +355,18 @@ namespace BancoDeSangre.Formularios
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label12;
+        public System.Windows.Forms.TextBox txtId;
+        public System.Windows.Forms.ComboBox cmbGenero;
+        public System.Windows.Forms.TextBox txtCorreo;
+        public System.Windows.Forms.TextBox txtOcupacion;
+        public System.Windows.Forms.TextBox txtCedula;
+        public System.Windows.Forms.TextBox txtApellidos;
+        public System.Windows.Forms.TextBox txtNombre;
+        public System.Windows.Forms.ComboBox cmbFactorRH;
+        public System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
+        public System.Windows.Forms.ComboBox cmbGrupoSanguineo;
+        public System.Windows.Forms.ComboBox cmbEstadoCivil;
+        public System.Windows.Forms.TextBox txtTelefono;
     }
 }

@@ -103,7 +103,7 @@ namespace BancoDeSangre.Formularios
                 Ocupacion = txtOcupacion.Text
             };
             donanteModel.Create(donante);
-            Dispose();
+            LimpiarCampos();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -111,7 +111,7 @@ namespace BancoDeSangre.Formularios
             Dispose();
         }
 
-        private void btnLimpiar_Click(object sender, EventArgs e)
+        private void LimpiarCampos()
         {
             txtNombre.Clear();
             txtApellidos.Clear();
@@ -123,6 +123,11 @@ namespace BancoDeSangre.Formularios
             cmbFactorRH.SelectedIndex = -1;
             cmbGenero.SelectedIndex = -1;
             cmbGrupoSanguineo.SelectedIndex = -1;
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
         }
 
         private void Panel1_Paint(object sender, PaintEventArgs e)

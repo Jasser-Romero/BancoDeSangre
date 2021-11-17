@@ -15,7 +15,6 @@ namespace BancoDeSangre.Formularios
 {
     public partial class FrmActualizar : Form
     {
-        public FrmConsultar FrmConsultar { get; set; }
         public IDonanteService DonanteService { get; set; }
         public FrmActualizar()
         {
@@ -27,7 +26,7 @@ namespace BancoDeSangre.Formularios
         {
             Donante donante = new Donante()
             {
-                Id = FrmConsultar.donanteActualizar.Id,
+                Id = Convert.ToInt32(txtId.Text),
                 Nombre = txtNombre.Text,
                 Apellido = txtApellidos.Text,
                 Cedula = txtCedula.Text,
@@ -41,7 +40,7 @@ namespace BancoDeSangre.Formularios
                 Ocupacion = txtOcupacion.Text
             };
 
-            DonanteService.Actualizar(donante);
+            DonanteService.Update(donante);
             Dispose();
         }
 
@@ -51,17 +50,6 @@ namespace BancoDeSangre.Formularios
             cmbGenero.Items.AddRange(Enum.GetValues(typeof(Genero)).Cast<object>().ToArray());
             cmbEstadoCivil.Items.AddRange(Enum.GetValues(typeof(EstadoCivil)).Cast<object>().ToArray());
             cmbFactorRH.Items.AddRange(Enum.GetValues(typeof(FactorRH)).Cast<object>().ToArray());
-
-            txtNombre.Text = FrmConsultar.donanteActualizar.Nombre;
-            txtApellidos.Text = FrmConsultar.donanteActualizar.Apellido;
-            txtCedula.Text = FrmConsultar.donanteActualizar.Cedula;
-            txtCorreo.Text = FrmConsultar.donanteActualizar.Correo;
-            txtOcupacion.Text = FrmConsultar.donanteActualizar.Ocupacion;
-            txtTelefono.Text = FrmConsultar.donanteActualizar.Telefono;
-            cmbGrupoSanguineo.SelectedIndex = (int)FrmConsultar.donanteActualizar.GrupoSanguineo;
-            cmbGenero.SelectedIndex = (int)FrmConsultar.donanteActualizar.Genero;
-            cmbFactorRH.SelectedIndex = (int)FrmConsultar.donanteActualizar.FactorRH;
-            cmbEstadoCivil.SelectedIndex = (int)FrmConsultar.donanteActualizar.EstadoCivil;
         }
     }
 }

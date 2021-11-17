@@ -18,7 +18,6 @@ namespace BancoDeSangre.Formularios
     public partial class FrmConsultar : Form
     {
         public Donante donanteActualizar;
-        public FrmConsultar frmConsultar;
         public IDonanteService donanteService { get; set; }
         public FrmConsultar()
         {
@@ -184,25 +183,25 @@ namespace BancoDeSangre.Formularios
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             FrmActualizar frmActualizar = new FrmActualizar();
-            frmConsultar = new FrmConsultar();
             frmActualizar.DonanteService = donanteService;
-            frmActualizar.FrmConsultar = frmConsultar;
-            donanteActualizar = new Donante()
-            {
-                Id = (int)dtgListaDonantes.CurrentRow.Cells[0].Value,
-                Nombre = dtgListaDonantes.CurrentRow.Cells[1].Value.ToString(),
-                Apellido = dtgListaDonantes.CurrentRow.Cells[2].Value.ToString(),
-                Cedula = dtgListaDonantes.CurrentRow.Cells[3].Value.ToString(),
-                Genero = (Genero)dtgListaDonantes.CurrentRow.Cells[4].Value,
-                Ocupacion = dtgListaDonantes.CurrentRow.Cells[5].Value.ToString(),
-                FechaNacimiento = (DateTime)dtgListaDonantes.CurrentRow.Cells[6].Value,
-                Telefono = dtgListaDonantes.CurrentRow.Cells[7].Value.ToString(),
-                FactorRH = (FactorRH)dtgListaDonantes.CurrentRow.Cells[8].Value,
-                GrupoSanguineo = (GrupoSanguineo)dtgListaDonantes.CurrentRow.Cells[9].Value,
-                EstadoCivil = (EstadoCivil)dtgListaDonantes.CurrentRow.Cells[10].Value,
-                Correo = dtgListaDonantes.CurrentRow.Cells[11].Value.ToString(),
-            };
+
+            frmActualizar.txtId.Text = dtgListaDonantes.CurrentRow.Cells[0].Value.ToString();
+            frmActualizar.txtNombre.Text = dtgListaDonantes.CurrentRow.Cells[1].Value.ToString();
+            frmActualizar.txtApellidos.Text = dtgListaDonantes.CurrentRow.Cells[2].Value.ToString();
+            frmActualizar.txtCedula.Text = dtgListaDonantes.CurrentRow.Cells[3].Value.ToString();
+            frmActualizar.cmbGenero.SelectedItem = (Genero)dtgListaDonantes.CurrentRow.Cells[4].Value;
+            frmActualizar.txtOcupacion.Text = dtgListaDonantes.CurrentRow.Cells[5].Value.ToString();
+            frmActualizar.dtpFechaNacimiento.Value = (DateTime)dtgListaDonantes.CurrentRow.Cells[6].Value;
+            frmActualizar.txtTelefono.Text = dtgListaDonantes.CurrentRow.Cells[7].Value.ToString();
+            frmActualizar.cmbFactorRH.SelectedItem = (FactorRH)dtgListaDonantes.CurrentRow.Cells[8].Value;
+            frmActualizar.cmbGrupoSanguineo.SelectedItem = (GrupoSanguineo)dtgListaDonantes.CurrentRow.Cells[9].Value;
+            frmActualizar.cmbEstadoCivil.SelectedItem = (EstadoCivil)dtgListaDonantes.CurrentRow.Cells[10].Value;
+            frmActualizar.txtCorreo.Text = dtgListaDonantes.CurrentRow.Cells[11].Value.ToString();
+
             frmActualizar.ShowDialog();
+
+            dtgListaDonantes.DataSource = null;
+            dtgListaDonantes.DataSource = donanteService.GetAll();
         }
     }
 }
