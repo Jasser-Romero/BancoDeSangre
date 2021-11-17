@@ -186,5 +186,62 @@
   <ItemGroup>
     <None Include="Resources\pngegg %281%291.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-x-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-maximize-button-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menos-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menos-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-restaurar-ventana-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banco-de-sangre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-añadir-usuario-masculino-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registros-medicos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-carpeta-de-doctores-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-búsqueda-de-propiedad-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-carpeta-de-búsqueda-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-proveedor-de-datos-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-rh-plus-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-gota-de-sangre-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-gota-de-sangre-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-rh-plus-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cuadrado-de-información-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ayuda-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ayuda-20.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

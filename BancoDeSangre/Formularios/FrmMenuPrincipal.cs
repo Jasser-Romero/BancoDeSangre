@@ -14,6 +14,8 @@ namespace BancoDeSangre.Formularios
 {
     public partial class FrmMenuPrincipal : Form
     {
+
+        public int xClick = 0, yClick = 0;
         public DonanteRepository donanteService;
         public FrmMenuPrincipal()
         {
@@ -46,6 +48,56 @@ namespace BancoDeSangre.Formularios
             FrmDonaciones frmDonaciones = new FrmDonaciones();
             frmDonaciones.donanteRepository = donanteService;
             frmDonaciones.ShowDialog();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnMaximizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            btnMaximizar.Visible = false;
+            btnRestaurar.Visible = true;
+        }
+
+        private void btnRestaurar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            btnRestaurar.Visible = false;
+            btnMaximizar.Visible = true;
+        }
+
+        private void pnlBarraTitulo_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                xClick = e.X; yClick = e.Y;
+
+            }
+            else
+            {
+                this.Left = this.Left + (e.X - xClick); this.Top = this.Top + (e.Y - yClick);
+            }
+        }
+
+        private void FrmMenuPrincipal_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                xClick = e.X; yClick = e.Y;
+
+            }
+            else
+            {
+                this.Left = this.Left + (e.X - xClick); this.Top = this.Top + (e.Y - yClick);
+            }
         }
     }
 }
