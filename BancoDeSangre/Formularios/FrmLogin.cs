@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppCore.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,8 +19,13 @@ namespace BancoDeSangre.Formularios
 
         private string User = "Admin";
         private string Password = "Anaconda";
-        public FrmLogin()
+
+        private IDonanteService donanteService;
+        private IDonacionService donacionService;
+        public FrmLogin(IDonanteService donanteService, IDonacionService donacionService)
         {
+            this.donacionService = donacionService;
+            this.donanteService = donanteService;
             InitializeComponent();
         }
 
@@ -79,7 +85,7 @@ namespace BancoDeSangre.Formularios
             if(txtUsuario.Text.Equals(User) && txtContrasena.Text.Equals(Password))
             {
                 this.Hide();
-                FrmMenuPrincipal principal = new FrmMenuPrincipal();
+                FrmMenuPrincipal principal = new FrmMenuPrincipal(donanteService, donacionService);
                 principal.ShowDialog();
                 this.Close();
             }
@@ -99,7 +105,7 @@ namespace BancoDeSangre.Formularios
                 if (txtUsuario.Text.Equals(User) && txtContrasena.Text.Equals(Password))
                 {
                     this.Hide();
-                    FrmMenuPrincipal principal = new FrmMenuPrincipal();
+                    FrmMenuPrincipal principal = new FrmMenuPrincipal(donanteService, donacionService);
                     principal.ShowDialog();
                     this.Close();
                 }

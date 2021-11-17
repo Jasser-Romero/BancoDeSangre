@@ -35,7 +35,7 @@ namespace BancoDeSangre
             //FrmMenuPrincipal frmMenu = new FrmMenuPrincipal(container.Resolve)
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmLogin());
+            Application.Run(new FrmLogin(container.Resolve<IDonanteService>(), container.Resolve<IDonacionService>()));
         }
     }
 }

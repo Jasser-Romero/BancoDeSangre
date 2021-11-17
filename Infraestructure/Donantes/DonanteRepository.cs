@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Infraestructure.Donantes
 {
-    public class DonanteRepository:IDonanteRepository
+    public class DonanteRepository : IDonanteRepository
     {
         private List<Donante> donantes;
         private List<Donante> donantesborrados;
@@ -25,20 +25,19 @@ namespace Infraestructure.Donantes
             donantes.Add(t);
         }
 
-        public void Borrar(int id)
+        public void Borrar(int index)
         {
-            Donante d = GetDonanteById(id);
-            if(d == null)
-            {
-                throw new ArgumentException($"Error, el donante con id {id} no se pudo borrar");
-            }
-            donantes.Remove(d);
-            donantesborrados.Add(d);
+            //Donante d = GetDonanteById(index);
+            //if(d == null)
+            //{
+            //    throw new ArgumentException($"Error, el donante con id {id} no se pudo borrar");
+            //}
+            donantes.RemoveAt(index);
         }
 
         public bool Delete(Donante t)
         {
-           if(t == null)
+            if (t == null)
             {
                 throw new ArgumentNullException(nameof(t));
             }
@@ -78,13 +77,13 @@ namespace Infraestructure.Donantes
             Donante dnt;
             Donante dnt1;
 
-            if(donantes.Count==0 && donantesborrados.Count == 0)
+            if (donantes.Count == 0 && donantesborrados.Count == 0)
             {
                 return 0;
             }
             if (donantesborrados.Count == 0)
             {
-                dnt = donantes.FindLast(D => D.Id>0);
+                dnt = donantes.FindLast(D => D.Id > 0);
                 return dnt.Id;
             }
             if (donantes.Count == 0)
@@ -118,6 +117,16 @@ namespace Infraestructure.Donantes
             return index;
         }
 
+        public void Actualizar(Donante t)
+        {
+            int index = donantes.IndexOf(t);
+            if(index < 0)
+            {
+                throw new Exception("El donante con dicha ID no existe");
+            }
+            donantes.RemoveAt(index);
+            donantes.Insert(index, t);
+        }
     }
 
 }

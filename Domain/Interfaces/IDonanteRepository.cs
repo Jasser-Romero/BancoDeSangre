@@ -9,5 +9,6 @@ namespace Domain.Interfaces
     {
         Donante GetDonanteById(int id);
         void Borrar(int id);
+        void Actualizar(Donante donante);
     }
 }

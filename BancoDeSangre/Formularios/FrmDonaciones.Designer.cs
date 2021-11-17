@@ -216,6 +216,7 @@ namespace BancoDeSangre.Formularios
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nudCantidadDonada);
             this.Controls.Add(this.label12);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmDonaciones";
             this.Text = "FrmDonaciones";

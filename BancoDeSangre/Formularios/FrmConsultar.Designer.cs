@@ -31,8 +31,8 @@ namespace BancoDeSangre.Formularios
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsultar));
             this.dtgListaDonantes = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnBorrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
@@ -54,24 +54,27 @@ namespace BancoDeSangre.Formularios
             this.dtgListaDonantes.Name = "dtgListaDonantes";
             this.dtgListaDonantes.Size = new System.Drawing.Size(761, 303);
             this.dtgListaDonantes.TabIndex = 0;
+            this.dtgListaDonantes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgListaDonantes_CellContentClick);
             // 
-            // button1
+            // btnActualizar
             // 
-            this.button1.Location = new System.Drawing.Point(583, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 36);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Actualizar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnActualizar.Location = new System.Drawing.Point(583, 12);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(86, 36);
+            this.btnActualizar.TabIndex = 1;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
-            // button2
+            // btnBorrar
             // 
-            this.button2.Location = new System.Drawing.Point(675, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 36);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Borrar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnBorrar.Location = new System.Drawing.Point(675, 12);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(86, 36);
+            this.btnBorrar.TabIndex = 2;
+            this.btnBorrar.Text = "Borrar";
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // label1
             // 
@@ -168,9 +171,10 @@ namespace BancoDeSangre.Formularios
             this.Controls.Add(this.cmbBusquedas);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnBorrar);
+            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.dtgListaDonantes);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmConsultar";
             this.Text = "Consultas";
@@ -187,8 +191,8 @@ namespace BancoDeSangre.Formularios
         #endregion
 
         private System.Windows.Forms.DataGridView dtgListaDonantes;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBusqueda;

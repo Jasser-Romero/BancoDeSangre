@@ -1,4 +1,5 @@
-﻿using AppCore.Services;
+﻿using AppCore.Interfaces;
+using AppCore.Services;
 using Infraestructure.Donantes;
 using System;
 using System.Collections.Generic;
@@ -16,10 +17,13 @@ namespace BancoDeSangre.Formularios
     {
 
         public int xClick = 0, yClick = 0;
-        public DonanteRepository donanteService;
-        public FrmMenuPrincipal()
+        //public DonanteRepository donanteService;
+        private IDonanteService donanteService;
+        private IDonacionService donacionService;
+        public FrmMenuPrincipal(IDonanteService donanteService, IDonacionService donacionService)
         {
-            donanteService = new DonanteRepository();
+            this.donanteService = donanteService;
+            this.donacionService = donacionService;
             InitializeComponent();
         }
 
@@ -32,14 +36,16 @@ namespace BancoDeSangre.Formularios
         {
             FrmRegistrarDonante frmRegistrarDonante = new FrmRegistrarDonante();
             frmRegistrarDonante.donanteModel = donanteService;
-            frmRegistrarDonante.ShowDialog();
+            AbrirFormHija(new FrmRegistrarDonante() {
+            donanteModel = donanteService
+            });
         }
 
         private void btnConsultas_Click(object sender, EventArgs e)
         {
             FrmConsultar frmConsultar = new FrmConsultar();
             frmConsultar.donanteService = donanteService;
-            frmConsultar.ShowDialog();
+            AbrirFormHija(frmConsultar);
 
         }
 
@@ -47,7 +53,8 @@ namespace BancoDeSangre.Formularios
         {
             FrmDonaciones frmDonaciones = new FrmDonaciones();
             frmDonaciones.donanteRepository = donanteService;
-            frmDonaciones.ShowDialog();
+            frmDonaciones.donacionService = donacionService;
+            AbrirFormHija(frmDonaciones);
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -98,6 +105,20 @@ namespace BancoDeSangre.Formularios
             {
                 this.Left = this.Left + (e.X - xClick); this.Top = this.Top + (e.Y - yClick);
             }
+        }
+
+        private void AbrirFormHija(object formHija)
+        {
+            if (this.pnlContenedor.Controls.Count > 0)
+            {
+                this.pnlContenedor.Controls.RemoveAt(0);
+            }
+            Form fh = formHija as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.pnlContenedor.Controls.Add(fh);
+            this.pnlContenedor.Tag = fh;
+            fh.Show();
         }
     }
 }

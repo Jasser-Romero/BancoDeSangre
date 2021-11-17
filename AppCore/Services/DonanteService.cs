@@ -16,6 +16,11 @@ namespace AppCore.Services
             this.donanteRepository = donanteRepository;
         }
 
+        public void Actualizar(Donante t)
+        {
+            donanteRepository.Actualizar(t);
+        }
+
         public void Borrar(int id)
         {
             donanteRepository.Borrar(id);
