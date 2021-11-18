@@ -3,11 +3,14 @@ using AppCore.Services;
 using Domain.Entities;
 using Domain.Enums;
 using Infraestructure.Donantes;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -66,12 +69,6 @@ namespace BancoDeSangre.Formularios
                     dtgListaDonantes.DataSource = donanteService.GetAll();
                     return;
                 }
-
-                //DataTable dt = ConvertToDataTable();
-                //dt.DefaultView.RowFilter = string.Format("Nombre LIKE '*{0}*' OR Cedula LIKE '*{0}*' OR Id = '{0}'", txtBusqueda.Text);
-                //BindingSource bs = new BindingSource();
-                //bs.DataSource = dt;
-                //dtgListaDonantes.DataSource = bs;
 
                 try
                 {
@@ -202,6 +199,62 @@ namespace BancoDeSangre.Formularios
 
             dtgListaDonantes.DataSource = null;
             dtgListaDonantes.DataSource = donanteService.GetAll();
+        }
+
+        private void btnGenerar_Click(object sender, EventArgs e)
+        {
+            if(dtgListaDonantes.CurrentRow.Selected == false)
+            {
+                MessageBox.Show("Seleccione por lo menos a un donante","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
+            }
+            ExportarPDF(dtgListaDonantes, "Reporte donantes");
+            MessageBox.Show("Documento generado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void ExportarPDF(DataGridView dgv, string nombre)
+        {
+            BaseFont bf = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1250, BaseFont.EMBEDDED);
+            PdfPTable pdfT = new PdfPTable(dgv.Columns.Count);
+
+            pdfT.DefaultCell.Padding = 3;
+            pdfT.WidthPercentage = 100;
+            pdfT.HorizontalAlignment = Element.ALIGN_LEFT;
+            pdfT.DefaultCell.BorderWidth = 1;
+
+            iTextSharp.text.Font text = new iTextSharp.text.Font(bf, 10, iTextSharp.text.Font.NORMAL);
+
+            foreach(DataGridViewRow row in dgv.Rows)
+            {
+                foreach(DataGridViewCell cell in row.Cells)
+                {
+                    pdfT.AddCell(new Phrase(cell.Value.ToString(), text));
+                }
+            }
+
+            SaveFileDialog save = new SaveFileDialog()
+            {
+                FileName = nombre,
+                DefaultExt = ".pdf"
+            };
+
+            if(save.ShowDialog() == DialogResult.OK)
+            {
+                FileStream fs = new FileStream(save.FileName, FileMode.Create);
+                Document doc = new Document(PageSize.LETTER, 10f, 10f, 10f, 0);
+
+                PdfWriter.GetInstance(doc, fs);
+                doc.Open();
+
+                //Encabezado
+                doc.Add(new Paragraph("REPORTE DONANTES:"));
+                doc.Add(Chunk.NEWLINE);
+
+                doc.Add(pdfT);
+
+                doc.Close();
+                fs.Close();
+            }
         }
     }
 }

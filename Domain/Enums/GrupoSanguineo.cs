@@ -8,6 +8,8 @@ namespace Domain.Enums
     {
         A_Positivo,
         A_Negativo,
+        B_Positivo,
+        B_Negativo,
         AB_Positivo,
         AB_Negativo,
         O_Positivo,

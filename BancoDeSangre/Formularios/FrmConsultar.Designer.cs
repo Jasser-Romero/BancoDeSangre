@@ -143,6 +143,7 @@ namespace BancoDeSangre.Formularios
             this.btnGenerar.Text = "Generar reporte";
             this.btnGenerar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGenerar.UseVisualStyleBackColor = false;
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
             // btnCancelar
             // 
