@@ -51,5 +51,10 @@ namespace BancoDeSangre.Formularios
             cmbEstadoCivil.Items.AddRange(Enum.GetValues(typeof(EstadoCivil)).Cast<object>().ToArray());
             cmbFactorRH.Items.AddRange(Enum.GetValues(typeof(FactorRH)).Cast<object>().ToArray());
         }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

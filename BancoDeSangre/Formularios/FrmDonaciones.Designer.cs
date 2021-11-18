@@ -29,6 +29,9 @@ namespace BancoDeSangre.Formularios
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDonaciones));
             this.nudCantidadDonada = new System.Windows.Forms.NumericUpDown();
             this.label12 = new System.Windows.Forms.Label();
@@ -143,9 +146,40 @@ namespace BancoDeSangre.Formularios
             // 
             // dgvMostrarDonantes
             // 
-            this.dgvMostrarDonantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMostrarDonantes.Location = new System.Drawing.Point(38, 231);
+            this.dgvMostrarDonantes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvMostrarDonantes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvMostrarDonantes.BackgroundColor = System.Drawing.Color.LightGray;
+            this.dgvMostrarDonantes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvMostrarDonantes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMostrarDonantes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvMostrarDonantes.ColumnHeadersHeight = 30;
+            this.dgvMostrarDonantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvMostrarDonantes.EnableHeadersVisualStyles = false;
+            this.dgvMostrarDonantes.GridColor = System.Drawing.Color.Red;
+            this.dgvMostrarDonantes.Location = new System.Drawing.Point(23, 233);
             this.dgvMostrarDonantes.Name = "dgvMostrarDonantes";
+            this.dgvMostrarDonantes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMostrarDonantes.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvMostrarDonantes.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvMostrarDonantes.Size = new System.Drawing.Size(910, 265);
             this.dgvMostrarDonantes.TabIndex = 41;
             this.dgvMostrarDonantes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMostrarDonantes_CellClick);
@@ -174,7 +208,7 @@ namespace BancoDeSangre.Formularios
             // txtGrupoSanguineo
             // 
             this.txtGrupoSanguineo.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.txtGrupoSanguineo.Location = new System.Drawing.Point(626, 105);
+            this.txtGrupoSanguineo.Location = new System.Drawing.Point(626, 102);
             this.txtGrupoSanguineo.Name = "txtGrupoSanguineo";
             this.txtGrupoSanguineo.ReadOnly = true;
             this.txtGrupoSanguineo.Size = new System.Drawing.Size(148, 22);
@@ -196,11 +230,11 @@ namespace BancoDeSangre.Formularios
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Red;
-            this.label14.Location = new System.Drawing.Point(393, 12);
+            this.label14.Location = new System.Drawing.Point(443, 11);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(164, 23);
+            this.label14.Size = new System.Drawing.Size(86, 23);
             this.label14.TabIndex = 48;
-            this.label14.Text = "CONSULTAR DONANTE";
+            this.label14.Text = "DONACION";
             this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnCancelar
@@ -243,7 +277,7 @@ namespace BancoDeSangre.Formularios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(960, 551);
+            this.ClientSize = new System.Drawing.Size(972, 559);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnDonar);
