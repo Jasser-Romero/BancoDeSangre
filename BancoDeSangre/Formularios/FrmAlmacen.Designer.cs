@@ -108,10 +108,11 @@ namespace BancoDeSangre.Formularios
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(64, 320);
+            this.lblTotal.Location = new System.Drawing.Point(117, 275);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(0, 45);
+            this.lblTotal.Size = new System.Drawing.Size(29, 45);
             this.lblTotal.TabIndex = 6;
+            this.lblTotal.Text = " ";
             // 
             // label3
             // 
