@@ -63,6 +63,16 @@ namespace BancoDeSangre.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ayuda {
+            get {
+                object obj = ResourceManager.GetObject("ayuda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap banco_de_sangre {
             get {
                 object obj = ResourceManager.GetObject("banco-de-sangre", resourceCulture);
@@ -316,6 +326,16 @@ namespace BancoDeSangre.Properties {
         internal static System.Drawing.Bitmap icons8_x_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-x-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mano {
+            get {
+                object obj = ResourceManager.GetObject("mano", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

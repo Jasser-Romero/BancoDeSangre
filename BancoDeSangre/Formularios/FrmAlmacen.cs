@@ -84,5 +84,10 @@ namespace BancoDeSangre.Formularios
                     break;
             }
         }
+
+        private void cpbProgresoAlmacen_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

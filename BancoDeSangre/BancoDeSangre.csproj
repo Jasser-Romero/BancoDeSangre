@@ -144,6 +144,9 @@
     <EmbeddedResource Include="Formularios\FrmAlmacen.resx">
       <DependentUpon>FrmAlmacen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmAyuda.resx">
+      <DependentUpon>FrmAyuda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmConsultar.resx">
       <DependentUpon>FrmConsultar.cs</DependentUpon>
     </EmbeddedResource>
@@ -286,6 +289,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-manual-de-usuario-30 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mano.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ayuda.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -129,9 +129,15 @@ namespace BancoDeSangre.Formularios
             fh.Show();
         }
 
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            FrmAyuda frmAyuda = new FrmAyuda();
+            AbrirFormHija(frmAyuda);
+        }
+
         private void pnlContenedor_Paint(object sender, PaintEventArgs e)
         {
-
+          
         }
     }
 }
